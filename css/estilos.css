@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-body{
+*{
     font-family: "Lato",sans-serif;
-    overflow-x: hidden;
 }
+/* Nadvar */
 #menu{
     background-color: black;
     font-family: "Lato",sans-serif;
@@ -20,14 +20,15 @@ body{
     padding: 1% 5%;
     max-height: 39rem;
 }
+/* Caja Negra */
 .container{
     background-color: black;
-    padding: 1rem 5rem;
-    margin: 1rem;
+    padding: 2% 5%;
+    margin: 1%;
 }
 .container h5{
     color: white;
-    font-size: 1rem;
+    font-size: 100%;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -35,52 +36,38 @@ body{
 }
 .container p{
     color: white;
-    font-size: 0.8rem;
+    font-size: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.container-items{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
-    padding: 2%;
-}
-.item{
-    border-radius: 20px;
-}
-.item:hover{
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.40);
-}
-
-.item img{
+/* Suplementos */
+.row img{
+    margin: 1%;
     max-width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
-    transition: all .5s;
+    transition: all 1s;
 }
-.item figure{
+.row img{
     overflow: hidden;
 }
-.item:hover img{
+.col:hover{
     transform: scale(1.05);
+    transition: all .5s;
 }
-.info-product h2{
+.card-body{
     padding: 5px 30px;
-    display: flex;
-    align-items:center;
-    justify-content: center;
 }
-.VerMas{
-    display: flex;
-    align-items:center;
-    justify-content: center;
+.vermas{
+    font-size: 1%;
 }
+/* Fotter */
 footer{
     background-color: #fff;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     position: absolute;
     left: 0;
