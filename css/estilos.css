@@ -18,10 +18,57 @@
   font-weight: bold;
   color: white;
 }
-
 .carousel-inner {
-  padding: 1% 5%;
+  padding: 1% 2%;
   max-height: 39rem;
+}
+.carousel-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.carousel-item:hover .overlay {
+  opacity: 1;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  display: none;
+}
+
+.carousel-caption h3 {
+  font-size: 1.5rem;
+  font-weight: 1rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.overlay:hover .carousel-caption {
+  display: block;
 }
 
 /* Caja Negra */
@@ -49,8 +96,26 @@
 }
 
 /* Suplementos */
-
-
+#suplementos img{
+  max-width: 100%;
+  height: 300px;
+  transition: 0.5s;
+}
+#suplementos img:hover{
+  transform: scale(1.05);
+}
+#boton{
+  display: block;
+  
+}
+#suples img{
+  max-width: 100%;
+  height: 90%;
+}
+.card-title{
+  font-size: 20px;
+  font-weight: bold;
+}
 /* Fotter */
 .footer-distributed{
   background: black;
@@ -150,7 +215,7 @@
 }
 
 .footer-distributed .footer-center p a{
-  color:  lightseagreen;
+  color:  #ffdf2b;
   text-decoration: none;;
 }
 
@@ -229,5 +294,12 @@
     margin-left: 0;
   }
 
+}
+@media (max-width: 767px) {
+  .carousel-caption {
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */
