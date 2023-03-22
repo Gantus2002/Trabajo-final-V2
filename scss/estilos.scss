@@ -1,139 +1,450 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-*{
-    font-family: "Lato",sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+    font-family: "Lato", sans-serif;
+}
+/*Variables*/
+$color-amarillo:#ffdf2b;
+/*Mixins*/
+@mixin cartas_personalizadas(){
+    max-width: 100%;
+    height: 300px;
 }
 /* Nadvar */
-#menu{
+#menu {
     background-color: black;
-    font-family: "Lato",sans-serif;
+    font-family: "Lato", sans-serif;
 }
-#menu button{
-    font-size: 20px;
-    font-weight: bold;
+
+#menu{ 
+    button {
+        font-size: 20px;
+        font-weight: bold;
 }
-#menu a{
-    font-size: 20px;
-    font-weight: bold;
-    color: white
+    a {
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
 }
-.carousel-inner{
-    padding: 1% 5%;
+}
+.nav-link{
+    transition: all 1s;
+}
+.nav-link:hover{
+    background-color: $color-amarillo;
+}
+/*Carrusel*/
+.carousel-inner {
+    padding: 1% 2%;
     max-height: 39rem;
 }
+.carousel-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.carousel-item:hover .overlay {
+    opacity: 1;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    display: none;
+}
+
+.carousel-caption {
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 1rem;
+        margin-bottom: 1rem;
+}
+    p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.overlay:hover .carousel-caption {
+    display: block;
+}
+
 /* Caja Negra */
 .container{
     background-color: black;
     padding: 2% 5%;
     margin: 1%;
 }
-.container h5{
-    color: white;
-    font-size: 100%;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.container {
+    h5 {
+        color: white;
+        font-size: 100%;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
-.container p{
-    color: white;
-    font-size: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    p {
+        color: white;
+        font-size: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
+}
+
 /* Suplementos */
-.row img{
-    margin: 1%;
+#suplementos {
+    img{
+        max-width: 100%;
+        height: 300px;
+        transition: 0.5s;
+}
+    img:hover{
+        transform: scale(1.05);
+}
+}
+#boton{
+    display: block;
+}
+#suples img{
     max-width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-    transition: all 1s;
+    height: 90%;
 }
-.row img{
-    overflow: hidden;
+.card-title{
+    font-size: 20px;
+    font-weight: bold;
 }
-.col:hover{
-    transform: scale(1.05);
-    transition: all .5s;
+.card-body p{
+    font-size: 12px;
 }
-.card-body{
-    padding: 5px 30px;
-}
-.vermas{
-    font-size: 1%;
-}
+
 /* Fotter */
-footer{
-    background-color: #fff;
-    margin: 0px;
-    padding: 0px;
+.footer-distributed{
+    background: black;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    right: 0;
-    background: #111;
-    height: auto;
-    width: 100vw;
-    font-family:  "Lato",sans-serif;
-    padding-top: 40px;
-    color: #fff;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
 }
-.footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
 }
-.footer-content h3{
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    line-height: 3rem;
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+    width: 40%;
 }
-.footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
+
+/* The company logo */
+
+.footer-distributed {
+    h3{
+        color:  #ffffff;
+        font: normal 36px 'Open Sans', cursive;
+        margin: 0;
 }
-.socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
+    h3 span{
+        color:  $color-amarillo;
 }
-.socials li{
-    margin: 0 10px;
 }
-.socials a{
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
     text-decoration: none;
+    color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+    color:  #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+    width: 35%;
+}
+
+.footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center {
+    p{
+        display: inline-block;
+        color: #ffffff;
+        font-weight:400;
+        vertical-align: middle;
+        margin:0;
+}
+    p span{
+        display:block;
+        font-weight: normal;
+        font-size:14px;
+        line-height:2;
+}
+    p a{
+        color:  $color-amarillo;
+        text-decoration: none;;
+}
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
     color: #fff;
-}
-.socials a i{
-    font-size: 1.1rem;
-    transition: color .4s ease;
-
-}
-.socials a:hover i{
-    color: yellow;
+    display: inline-block;
+    padding-right: 5px;
 }
 
-.footer-bottom{
-    background: #000;
-    width: 100vw;
-    padding: 20px 0;
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+/* Footer Right */
+
+.footer-distributed .footer-right{
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/*Tienda creatina*/
+#creatina1 img{
+    @include cartas_personalizadas();
+}
+#creatina2 img{
+    @include cartas_personalizadas();
+}
+#creatina3 img{
+    @include cartas_personalizadas();
+}
+/*Tienda multivitaminico*/
+#multivitaminico1 img{
+    @include cartas_personalizadas();
+}
+#multivitaminico2 img{
+    @include cartas_personalizadas();;
+}
+#multivitaminico3 img{
+    @include cartas_personalizadas();
+}
+/*Ofertas*/
+
+#ofertas{
+    margin-top: 15px;
+}
+#ofertas img{
+    @include cartas_personalizadas();
+}
+.new-badge {
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    z-index: 1;
+    transform: rotate(45deg);
+    animation: move-badge 1s ease-in-out infinite;
+}
+
+.cta {
+    border: none;
+    background: none;
+}
+
+.cta {
+    span {
+        padding-bottom: 7px;
+        letter-spacing: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        padding-right: 15px;
+        text-transform: uppercase;
+    }
+    svg {
+        transform: translateX(-8px);
+        transition: all 0.3s ease;
+    }
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: $color-amarillo;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+@keyframes move-badge {
+    0% {
+    transform: rotate(45deg) translateX(0);
+}
+    50% {
+    transform: rotate(45deg) translateX(10px);
+}
+    100% {
+    transform: rotate(45deg) translateX(0);
+}
+}
+/*Card*/
+.card{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+cursor: pointer;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+
+@media (max-width: 880px) {
+
+.footer-distributed{
+    font: bold 14px sans-serif;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
     text-align: center;
 }
-.footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
+
+.footer-distributed .footer-center i{
+    margin-left: 0;
 }
-.footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
+
+}
+@media (max-width: 767px) {
+.carousel-caption h3{
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+    font-size: 120%;
+}
+}
+@media (max-width: 767px) {
+.carousel-caption p{
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+    font-size: 75%;
+}
 }

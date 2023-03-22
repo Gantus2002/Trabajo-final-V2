@@ -2,6 +2,9 @@
 * {
   font-family: "Lato", sans-serif;
 }
+
+/*Variables*/
+/*Mixins*/
 /* Nadvar */
 #menu {
   background-color: black;
@@ -12,32 +15,35 @@
   font-size: 20px;
   font-weight: bold;
 }
-
 #menu a {
   font-size: 20px;
   font-weight: bold;
   color: white;
 }
-.nav-link{
+
+.nav-link {
   transition: all 1s;
 }
-.nav-link:hover{
+
+.nav-link:hover {
   background-color: #ffdf2b;
 }
+
 /*Carrusel*/
 .carousel-inner {
   padding: 1% 2%;
   max-height: 39rem;
 }
+
 .carousel-item .overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  transition: opacity .5s ease;
+  transition: opacity 0.5s ease;
 }
 
 .carousel-item:hover .overlay {
@@ -52,6 +58,7 @@
   color: white;
   text-align: center;
 }
+
 .carousel-caption {
   position: absolute;
   top: 50%;
@@ -68,7 +75,6 @@
   font-weight: 1rem;
   margin-bottom: 1rem;
 }
-
 .carousel-caption p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
@@ -79,7 +85,7 @@
 }
 
 /* Caja Negra */
-.container{
+.container {
   background-color: black;
   padding: 2% 5%;
   margin: 1%;
@@ -93,7 +99,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .container p {
   color: white;
   font-size: 80%;
@@ -103,32 +108,35 @@
 }
 
 /* Suplementos */
-#suplementos img{
+#suplementos img {
   max-width: 100%;
   height: 300px;
   transition: 0.5s;
 }
-#suplementos img:hover{
+#suplementos img:hover {
   transform: scale(1.05);
 }
-#boton{
+
+#boton {
   display: block;
-  
 }
-#suples img{
+
+#suples img {
   max-width: 100%;
   height: 90%;
 }
-.card-title{
+
+.card-title {
   font-size: 20px;
   font-weight: bold;
 }
-.card-body p{
+
+.card-body p {
   font-size: 12px;
 }
 
 /* Fotter */
-.footer-distributed{
+.footer-distributed {
   background: black;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
@@ -140,60 +148,55 @@
 
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
-.footer-distributed .footer-right{
+.footer-distributed .footer-right {
   display: inline-block;
   vertical-align: top;
 }
 
 /* Footer left */
-
-.footer-distributed .footer-left{
+.footer-distributed .footer-left {
   width: 40%;
 }
 
 /* The company logo */
-
-.footer-distributed h3{
-  color:  #ffffff;
-  font: normal 36px 'Open Sans', cursive;
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px "Open Sans", cursive;
   margin: 0;
 }
-
-.footer-distributed h3 span{
-  color:  #ffdf2b;
+.footer-distributed h3 span {
+  color: #ffdf2b;
 }
 
 /* Footer links */
-
-.footer-distributed .footer-links{
-  color:  #ffffff;
+.footer-distributed .footer-links {
+  color: #ffffff;
   margin: 20px 0 12px;
   padding: 0;
 }
 
-.footer-distributed .footer-links a{
-  display:inline-block;
+.footer-distributed .footer-links a {
+  display: inline-block;
   line-height: 1.8;
-  font-weight:400;
+  font-weight: 400;
   text-decoration: none;
-  color:  inherit;
+  color: inherit;
 }
 
-.footer-distributed .footer-company-name{
-  color:  #222;
+.footer-distributed .footer-company-name {
+  color: #222;
   font-size: 14px;
   font-weight: normal;
   margin: 0;
 }
 
 /* Footer Center */
-
-.footer-distributed .footer-center{
+.footer-distributed .footer-center {
   width: 35%;
 }
 
-.footer-distributed .footer-center i{
-  background-color:  #33383b;
+.footer-distributed .footer-center i {
+  background-color: #33383b;
   color: #ffffff;
   font-size: 25px;
   width: 38px;
@@ -205,34 +208,32 @@
   vertical-align: middle;
 }
 
-.footer-distributed .footer-center i.fa-envelope{
+.footer-distributed .footer-center i.fa-envelope {
   font-size: 17px;
   line-height: 38px;
 }
 
-.footer-distributed .footer-center p{
+.footer-distributed .footer-center p {
   display: inline-block;
   color: #ffffff;
-  font-weight:400;
+  font-weight: 400;
   vertical-align: middle;
-  margin:0;
+  margin: 0;
 }
-
-.footer-distributed .footer-center p span{
-  display:block;
+.footer-distributed .footer-center p span {
+  display: block;
   font-weight: normal;
-  font-size:14px;
-  line-height:2;
+  font-size: 14px;
+  line-height: 2;
 }
-
-.footer-distributed .footer-center p a{
-  color:  #ffdf2b;
-  text-decoration: none;;
+.footer-distributed .footer-center p a {
+  color: #ffdf2b;
+  text-decoration: none;
 }
 
 .footer-distributed .footer-links a:before {
   content: "|";
-  font-weight:300;
+  font-weight: 300;
   font-size: 20px;
   left: 0;
   color: #fff;
@@ -243,84 +244,89 @@
 .footer-distributed .footer-links .link-1:before {
   content: none;
 }
-/* Footer Right */
 
-.footer-distributed .footer-right{
+/* Footer Right */
+.footer-distributed .footer-right {
   width: 20%;
 }
 
-.footer-distributed .footer-company-about{
+.footer-distributed .footer-company-about {
   line-height: 20px;
-  color:  #92999f;
+  color: #92999f;
   font-size: 13px;
   font-weight: normal;
   margin: 0;
 }
 
-.footer-distributed .footer-company-about span{
+.footer-distributed .footer-company-about span {
   display: block;
-  color:  #ffffff;
+  color: #ffffff;
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.footer-distributed .footer-icons{
+.footer-distributed .footer-icons {
   margin-top: 25px;
 }
 
-.footer-distributed .footer-icons a{
+.footer-distributed .footer-icons a {
   display: inline-block;
   width: 35px;
   height: 35px;
   cursor: pointer;
-  background-color:  #33383b;
+  background-color: #33383b;
   border-radius: 2px;
-
   font-size: 20px;
   color: #ffffff;
   text-align: center;
   line-height: 35px;
-
   margin-right: 3px;
   margin-bottom: 5px;
 }
 
 /*Tienda creatina*/
-#creatina1 img{
+#creatina1 img {
   max-width: 100%;
   height: 300px;
 }
-#creatina2 img{
-  max-width: 100%;
-  height: 300px;
-}
-#creatina3 img{
-  max-width: 100%;
-  height: 300px;
-}
-/*Tienda multivitaminico*/
-#multivitaminico1 img{
-  max-width: 100%;
-  height: 300px;
-}
-#multivitaminico2 img{
-  max-width: 100%;
-  height: 300px;
-}
-#multivitaminico3 img{
-  max-width: 100%;
-  height: 300px;
-}
-/*Ofertas*/
 
-#ofertas{
+#creatina2 img {
+  max-width: 100%;
+  height: 300px;
+}
+
+#creatina3 img {
+  max-width: 100%;
+  height: 300px;
+}
+
+/*Tienda multivitaminico*/
+#multivitaminico1 img {
+  max-width: 100%;
+  height: 300px;
+}
+
+#multivitaminico2 img {
+  max-width: 100%;
+  height: 300px;
+}
+
+#multivitaminico3 img {
+  max-width: 100%;
+  height: 300px;
+}
+
+/*Ofertas*/
+#ofertas {
   margin-top: 15px;
 }
-#ofertas img{
+
+#ofertas img {
   max-width: 100%;
-  height: 350px;
+  height: 300px;
 }
+
 .new-badge {
   position: absolute;
   top: 10px;
@@ -343,7 +349,6 @@
   padding-right: 15px;
   text-transform: uppercase;
 }
-
 .cta svg {
   transform: translateX(-8px);
   transition: all 0.3s ease;
@@ -359,7 +364,7 @@
 
 .hover-underline-animation {
   position: relative;
-  color:#ffdf2b;
+  color: #ffdf2b;
   padding-bottom: 20px;
 }
 
@@ -380,6 +385,7 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 @keyframes move-badge {
   0% {
     transform: rotate(45deg) translateX(0);
@@ -392,42 +398,37 @@
   }
 }
 /*Card*/
-.card{
+.card {
   border-radius: 4px;
   background: #fff;
-  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow;
+  cursor: pointer;
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
-
 
 @media (max-width: 880px) {
-
-  .footer-distributed{
+  .footer-distributed {
     font: bold 14px sans-serif;
   }
-
   .footer-distributed .footer-left,
   .footer-distributed .footer-center,
-  .footer-distributed .footer-right{
+  .footer-distributed .footer-right {
     display: block;
     width: 100%;
     margin-bottom: 40px;
     text-align: center;
   }
-
-  .footer-distributed .footer-center i{
+  .footer-distributed .footer-center i {
     margin-left: 0;
   }
-
 }
 @media (max-width: 767px) {
-  .carousel-caption h3{
+  .carousel-caption h3 {
     position: relative;
     background-color: transparent;
     padding: 0;
@@ -435,11 +436,10 @@ cursor: pointer;
   }
 }
 @media (max-width: 767px) {
-  .carousel-caption p{
+  .carousel-caption p {
     position: relative;
     background-color: transparent;
     padding: 0;
     font-size: 75%;
   }
-}
-/*# sourceMappingURL=estilos.css.map */
+}/*# sourceMappingURL=estilos.css.map */
