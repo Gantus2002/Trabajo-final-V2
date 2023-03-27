@@ -32,6 +32,12 @@ $color-amarillo:#ffdf2b;
 .nav-link:hover{
     background-color: $color-amarillo;
 }
+.navbar-toggler-icon {
+    color: white !important;
+}  
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    color: white !important;
+}
 /*Carrusel*/
 .carousel-inner {
     padding: 1% 2%;
